@@ -6,7 +6,36 @@
         xmlns:local="clr-namespace:WpfApp21"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Background="LightSteelBlue">
+        <GroupBox Header="Generowanie hasła" Margin="417,86,43,144">
+            <StackPanel>
+                <Label Height="57" Content="Ile znaków?"/>
+                <CheckBox x:Name="maleWielkie" Content="Małe i Wielkie litery" Height="25" Checked="maleWielkie_Checked"/>
+                <CheckBox x:Name="Cyfry" Content="Cyfry" Height="34" Checked="Cyfry_Checked"/>
+                <CheckBox x:Name="ZnakiSpec" Content="Znaki specjalne" Height="34" Checked="ZnakiSpec_Checked"/>
+                <Button x:Name="GenerujHaslo" Content="Generuj haslo" Width="107" BorderBrush="#FFFDF9F9" Foreground="White" Background="SteelBlue" Click="GenerujHaslo_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Dane pracownika" Margin="53,86,454,139">
+            <StackPanel>
+                <Label Content="Imię" Height="45"/>
+                <Label Content="Nazwisko" Height="45"/>
+                <Label Content="Stanowisko" Height="45"/>
+
+            </StackPanel>
+        </GroupBox>
+        <TextBox x:Name="Znaki" HorizontalAlignment="Right" Margin="0,110,63,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Height="25" TextChanged="Znaki_TextChanged"/>
+        <Button x:Name="Zatwierdz" Content="Zatwierdź" HorizontalAlignment="Left" Margin="262,364,0,0" VerticalAlignment="Top" Height="25" Width="244" Foreground="#FFFDF8F8" BorderBrush="#FFFBF8F8" Background="SteelBlue" RenderTransformOrigin="0.5,0.5" Click="Zatwierdz_Click"/>
+        <TextBox x:Name="Imie" HorizontalAlignment="Right" Margin="0,110,480,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21" TextChanged="Imie_TextChanged"/>
+        <TextBox x:Name="NAzwisko" HorizontalAlignment="Right" Margin="0,160,480,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="NAzwisko_TextChanged"/>
+        <ComboBox x:Name="Combobox" HorizontalAlignment="Right" Margin="0,201,480,0" VerticalAlignment="Top" Width="120" SelectionChanged="Combobox_SelectionChanged">
+            <ComboBoxItem x:Name="Kierownik" Content="Kierownik"/>
+            <ComboBoxItem x:Name="SProgramista" Content="Starszy programista"/>
+            <ComboBoxItem x:Name="Mprogramista" Content="Młodszy programista"/>
+            <ComboBoxItem x:Name="Tester" Content="Tester"/>
+        </ComboBox>
+
+
 
     </Grid>
 </Window>
